@@ -4,12 +4,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Construyendo la aplicacion'
+                sh 'mvn -B -DskipTests clean package'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Ejecutar los tests '
+                sh 'mvn test'
             }
         }
         stage('Deploy') {
