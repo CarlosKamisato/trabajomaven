@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn install'                
+                sh 'install'                
             }
         }
 
         stage('Test') {
             steps {
-                sh 'mvn test'               
+                sh 'test'               
             }
         }
         stage('Deploy') {
