@@ -3,18 +3,18 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'install'                
+                sh 'mvn clean compile'                
             }
         }
 
         stage('Test') {
             steps {
-                sh 'test'               
+                sh 'mvn test'               
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Desplegando el area de desarrollo'
+                sh 'mvn install'
             }
         }
     } 
