@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 //echo 'Ejecutar los tests '
-                sh '-B -DskipTests clean package'               
+                //sh '-B -DskipTests clean package'               
             }
         }
         stage('Deploy') {
