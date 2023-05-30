@@ -3,14 +3,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Construyendo la aplicacion'
+                //echo 'Construyendo la aplicacion'
                 sh 'mvn install'                
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Ejecutar los tests '
+                //echo 'Ejecutar los tests '
                 sh 'mvn test'               
             }
         }
