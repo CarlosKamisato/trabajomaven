@@ -4,20 +4,20 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Construyendo la aplicacion'
-                //sh 'mvn clean compile'                
+                sh 'mvn clean compile'                
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Ejecutar los tests '
-                //sh 'mvn test'               
+                sh 'mvn test'               
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Desplegando el area de desarrollo'
-                //sh 'mvn install'
+                sh 'mvn install'
             }
         }
     } 
