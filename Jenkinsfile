@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Construyendo la aplicacion'
-                sh 'mvn install'                
+                sh 'mvn clear install'                
             }
         }
 
