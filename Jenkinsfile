@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Construyendo la aplicacion'
-                sh 'mvn clear install'                
+                //sh 'mvn clear install'                
             }
         }
 
@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Desplegando el area de desarrollo'
-                sh 'java -jar /var/jenkins_home/workspace/trabajomaven/target/trabajomaven-1.0-SNAPSHOT.jar'
+                //sh 'java -jar /var/jenkins_home/workspace/trabajomaven/target/trabajomaven-1.0-SNAPSHOT.jar'
             }
         }
     } 
